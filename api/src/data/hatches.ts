@@ -1,20 +1,20 @@
-export interface Insect {
+export type Insect = {
   id: string;
   name: string;
   type: "mayfly" | "caddis" | "stonefly" | "midge";
   hatchTemp: { min: number; max: number };
   hatchMonths: number[];
-  timeOfDay: string[];
+  timeOfDay: ("morning" | "midday" | "evening")[];
   suggestedFly: string;
-}
+};
 
-export interface River {
+export type River = {
   id: string;
   name: string;
   region: string;
   currentWaterTemp: number;
   insects: string[];
-}
+};
 
 export const insects: Insect[] = [
   {
